@@ -1,0 +1,12 @@
+title Tehtävä 0.6 - 'single page app'-muistiinpano
+
+note over Selain:
+Kun 'talleta' nappia on painettu. Napille asetettu 
+tapahtumankäsittelijä kutsuu heti metodia e.preventDefaul()
+joka estää tavanoimaisen lähetyksen. Sitten note luodaan,
+lisätään json listaan, näyttö piirretään uudestaan, minkä
+jälkeen se vasta lähettää noten itse palvelimelle.
+end note over 
+Selain->Palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+Palvelin->Selain: Palvelin vastaa statuskoodilla 201 created
+

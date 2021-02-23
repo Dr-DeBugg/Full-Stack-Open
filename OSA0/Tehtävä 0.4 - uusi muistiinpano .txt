@@ -1,0 +1,25 @@
+title Tehtävä 0.4 - uusi muistiinpano 
+
+Selain->Palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+note over Palvelin: Palvelin lisää noten sisällön data.json fileen
+Selain->Palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+Palvelin->Selain: HTML koodi
+note over Selain:
+Selain lähettää GET pyyntöjä 
+suorittamansa HTML koodin mukaan
+end note
+Selain->Palvelin: HTTP https://fullstack-exampleapp.herokuapp.com/main.css
+Palvelin->Selain: Palvelin lähettää CSS koodin
+Selain->Palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+Palvelin->Selain: Palvelin lähettää Javascript tiedoston koodin
+note over Selain:
+Selain suorittaa JS koodia, joka saa sen hakemaan json datan serveritlä
+end note
+Selain->Palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+Palvelin->Selain: Palvelin lähettää notejen datanbasena käytetyn koodin
+note over Selain:
+"selain suorittaa tapahtumankäsittelijän
+joka renderöi muistiinpanot näytölle"
+end note over 
+Selain->Palvelin: HTTP GET 404 - Palvelin ei löydä favicon.ico tiedostoa
+

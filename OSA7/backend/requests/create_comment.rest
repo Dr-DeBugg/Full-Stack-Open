@@ -1,0 +1,6 @@
+POST http://localhost:3001/api/blogs/5ef1e9f6357b1b08f8bc8bbf/comments
+Content-Type: application/json
+
+{
+  "content": "sdsd"
+}

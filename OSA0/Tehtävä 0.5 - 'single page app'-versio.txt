@@ -1,0 +1,24 @@
+title Tehtävä 0.5 - 'single page app'-versio
+
+Selain->Palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+Palvelin->Selain: HTML koodi
+note over Selain:
+Selain suorittaa HTML koodia, jonka alussa
+se laitetaan lataamaan CSS ja JS tiedostot
+end note
+Selain->Palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+Palvelin->Selain: CSS koodi
+Selain->Palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+Palvelin->Selain: Palvelin lähettää Javascript koodin
+note over Selain:
+Selaimen suoritaessa JS koodia, se saa
+sen lataamaan json databasen serveriltä
+end note
+Selain->Palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+Palvelin->Selain: Palvelin lähettää notejen datanbasena käytetyn koodin
+note over Selain:
+"selain suorittaa tapahtumankäsittelijän
+joka renderöi muistiinpanot näytölle"
+end note over 
+Selain->Palvelin: HTTP GET 404 - Palvelin ei löydä favicon.ico tiedostoa
+
